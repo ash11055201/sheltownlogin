@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="homestyle.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+<script src="https://code.jquery.com/jquery-2.1.0.min.js" ></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+
+	
+<body>
+	<div class="header">
+  		<a href="#" class="logo">Home</a>
+	</div>
+	<div class="row">
+	<div class="column"> 
+		<div class="logintext">
+		<h3><b>Why to Pay!!</b></h3>
+		<h3><b>Get unlimited-free property details </b></h3>
+		<h4><i>Dont just move-in , own-in</i></h4>
+		<p><span class="glyphicon glyphicon-ok"></span>  Every entity verified</p>
+		<p><span class="glyphicon glyphicon-ok"></span>  Property listings verified</p>
+		<p><span class="glyphicon glyphicon-ok"></span>  No commission</p>
+		<p><span class="glyphicon glyphicon-ok"></span>  Your Home Your Rules</p>
+		<p><span class="glyphicon glyphicon-ok"></span>  Rent payment on credit</p>
+		<p><span class="glyphicon glyphicon-ok"></span>  Premium Properties </p>
+		<p><span class="glyphicon glyphicon-ok"></span>	 Premium Plans </p><br>
+		</div>
+	</div>
+	<div class="column" >
+	
+		<div id="formWrapper">
+
+		<div id="form">
+		<div class="sheltownlogo">
+			<img src="SheltownLogo.jpg">
+		</div>
+		<!-- <div class="shetlownheader">
+			<h2>Sheltown</h2><br>	 
+		</div>
+		<div class="sheltownsubtext">
+			<p>Live Like You Own It.</p>
+		</div> -->
+		<div class="login1">
+			<p>LOGIN</p>
+		</div>
+				<div class="form-item">
+					<p class="formLabel">Phone Number</p>
+					<input type="text" name="phno" id="phno" class="form-style" autocomplete="off"/>
+				</div>
+				<div class="form-item">
+					
+					<div class="form-group has-feedback">
+							<p class="formLabel">Password</p>
+					<input type="password" name="password" id="password" class="form-style form-control ">
+
+					<i class="glyphicon glyphicon-eye-open form-control-feedback"></i>
+					
+					<!-- <span class="glyphicon glyphicon-eye-open form-control-feedback" id="eye"></span> -->
+					</div>
+		      		</div>
+					<!-- <div class="pw-view"><i class="fa fa-eye"></i></div> -->
+					<p class="fpassword"><a href="#">Forgot Password ?</a></p>	
+				
+				<div class="form-item">
+				<!-- <p class="pull-left"><a href="#"><small>Register</small></a></p> -->
+				<input type="submit" class="login " value="Log In"><br>
+				<p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
+				</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	</div>
+
+
+</body>
+</html>
+</body>
+<script>
+
+	$(document).ready(function(){
+	var formInputs = $('input[type="phno"],input[type="password"]');
+	formInputs.focus(function() {
+       $(this).parent().children('p.formLabel').addClass('formTop');
+       $('div#formWrapper').addClass('darken-bg');
+       $('div.logo').addClass('logo-active');
+	});
+	formInputs.focusout(function() {
+		if ($.trim($(this).val()).length == 0){
+		$(this).parent().children('p.formLabel').removeClass('formTop');
+		}
+		$('div#formWrapper').removeClass('darken-bg');
+		$('div.logo').removeClass('logo-active');
+	});
+	$('p.formLabel').click(function(){
+		 $(this).parent().children('.form-style').focus();
+	});
+});
+</script>
+<script>
+    	const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
+</html>
